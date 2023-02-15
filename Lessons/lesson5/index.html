@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 10000px;
+        }
+
+        h1+p {
+            color: red;
+        }
+
+        h3~p {
+            font-style: italic;
+        }
+
+        p span {
+            background: red;
+        }
+
+        [type="text"] {
+            border: 2px solid red;
+        }
+
+        [type="email"] {
+            border: 2px solid blue;
+        }
+
+        [type="password"] {
+            border: 2px solid green;
+        }
+
+        [type="number"] {
+            border: 2px solid orange;
+        }
+
+        /* [href^="https://"] {
+            color: green;
+        }
+        [href^="http://"] {
+            color: red;
+        }
+        [href$="ru/"]{
+            font-weight: 900;
+        }
+        [href*="v.b"]{
+            font-style: italic;
+        } */
+        p::selection{
+            background:#000;
+            color:rgb(16, 191, 0);
+        }
+        ul{
+            padding-left: 0;
+            counter-reset: planet;
+        }
+        li{
+            list-style-type: none;
+        }
+        li::before{
+            counter-increment: planet;
+            content: 'Планета: ' counter(planet) '. ' 
+        }
+
+        a:link{
+            color: orange;
+        }
+        /* a:visited{
+            color: red;
+            background: blue;
+        } */
+        a:active{
+            font-weight: 900;
+        }
+        a:focus{
+            font-style: italic;
+        }
+        a:visited:hover{
+            color: blue;
+        }
+        li:nth-child(3n+2){
+            background: red;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <h1>hello</h1>
+
+    <p>world</p>
+
+    <h3>test</h3>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas laboriosam dolorum quae iure! Delectus, officiis
+        aspernatur maiores minus necessitatibus aut, animi veritatis voluptatibus culpa, perspiciatis enim nostrum
+        laborum in dicta?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, vero eius, cum alias dicta officiis voluptas
+        quidem, esse amet voluptatum veniam sed unde blanditiis illo. Laborum temporibus soluta iure dolor?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem illum ex reprehenderit, minima veniam tempora
+        iure non qui deleniti, ab soluta libero labore dicta ad alias molestiae, fuga ipsam eveniet.</p>
+
+    <hr>
+
+    <span>span1</span>
+
+    <div>
+        <span>span2</span>
+        <p>
+            <span>span3</span>
+
+            <strong>
+                <span>span4</span>
+            </strong>
+        </p>
+    </div>
+
+    <hr>
+
+    <input type="email"> <br><br>
+    <input type="text" title="hello"> <br><br>
+    <input type="email"> <br><br>
+    <input type="password" title="hello"> <br><br>
+    <input type="number"> <br><br>
+    <input type="email"> <br><br>
+
+    <hr>
+
+    <a href="http://142.93.172.35:8080">homework</a> <br>
+    <a href="https://av1111.by/">avby</a> <br>
+    <a href="https://aliexpress.ru/">aliexpress</a>
+
+    <hr>
+
+    <ul>
+        <li>Меркурий</li>
+        <li>Венера</li>
+        <li>Земля</li>
+        <li>Марс</li>
+        <li>Юпитер</li>
+        <li>Сатурн</li>
+        <li>Уран</li>
+        <li>Нептун</li>
+        <li>Плутон</li>
+    </ul>
+</body>
+
+</html>
